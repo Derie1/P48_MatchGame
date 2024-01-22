@@ -36,7 +36,7 @@ namespace P48_MatchGame
         {
             tenthsOfSecondsElapsed++;
             timeTextBlock.Text = (tenthsOfSecondsElapsed / 10F).ToString("0.0s");
-            if (matchesFound == 8) 
+            if (matchesFound == 8)
             {
                 timer.Stop();
                 timeTextBlock.Text = timeTextBlock.Text + " - Play again?";
@@ -64,6 +64,7 @@ namespace P48_MatchGame
                     int index = random.Next(animalEmoji.Count);
                     string nextEmoji = animalEmoji[index];
                     textBlock.Text = nextEmoji;
+                    textBlock.Visibility = Visibility.Visible;
                     animalEmoji.RemoveAt(index);
                 }
             }
